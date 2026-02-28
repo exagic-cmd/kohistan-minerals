@@ -28,13 +28,13 @@ export default function Applications() {
   return (
     <section className="py-24 bg-white text-black relative" id="applications">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="relative rounded-[3rem] bg-[#141414] p-12 lg:p-20 overflow-hidden shadow-2xl">
-          {/* Decorative Background grid/dots */}
+        <div className="relative rounded-[3rem] bg-[#F8F8F8] p-12 lg:p-20 overflow-hidden border border-black/5 shadow-xl shadow-black/[0.02]">
+          {/* Decorative Background grid/dots - subtle on light */}
           <div
-            className="absolute inset-0 opacity-[0.03]"
+            className="absolute inset-0 opacity-[0.05]"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+                "radial-gradient(circle at 1px 1px, #CA7A7B 1px, transparent 0)",
               backgroundSize: "40px 40px",
             }}
           />
@@ -54,19 +54,17 @@ export default function Applications() {
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.1]">
+              <h2 className="text-4xl md:text-6xl font-bold text-black mb-8 leading-[1.1]">
                 Powering Global <br />
                 <span className="text-[#CA7A7B]">Industries</span>
               </h2>
 
-              <p className="text-white/50 leading-relaxed text-lg mb-12">
+              <p className="text-black/60 leading-relaxed text-lg mb-12">
                 Our high-purity minerals provide essential solutions across a
                 diverse range of sectors, from massive chemical processing
                 plants to premium gourmet brands and luxury wellness
                 experiences.
               </p>
-
-              <div className="hidden md:block w-40 h-40 border border-white/5 rounded-full absolute -left-20 top-1/2 -translate-y-1/2" />
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 flex-grow w-full">
@@ -77,13 +75,13 @@ export default function Applications() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group bg-white/5 hover:bg-[#CA7A7B]/10 border border-white/10 hover:border-[#CA7A7B]/30 p-8 rounded-[2rem] transition-all duration-300 backdrop-blur-sm"
+                  className="group bg-white hover:bg-[#CA7A7B] border border-black/5 hover:border-[#CA7A7B] p-8 rounded-[2rem] transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-[#CA7A7B]/20"
                 >
                   <div className="flex items-center gap-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[#CA7A7B] text-white flex items-center justify-center shrink-0 shadow-lg shadow-[#CA7A7B]/20 transition-transform duration-500 group-hover:rotate-[360deg]">
+                    <div className="w-12 h-12 rounded-2xl bg-[#CA7A7B]/10 text-[#CA7A7B] flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#CA7A7B]">
                       {app.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white leading-tight group-hover:text-[#CA7A7B] transition-colors font-sans">
+                    <h3 className="text-xl font-bold text-black leading-tight group-hover:text-white transition-colors">
                       {app.title}
                     </h3>
                   </div>
